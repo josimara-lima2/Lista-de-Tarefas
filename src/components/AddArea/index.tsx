@@ -10,7 +10,7 @@ type Props={
 export const AddArea = ({onEnter}:Props) => {
 
     const [inputText,setInputText] = useState('')
-    const [doneInput,setDone] = useState(false)
+    
 
     const handleKeyUp = (e:KeyboardEvent) => {
             if(e.code === 'Enter' && inputText !== ''){
@@ -19,9 +19,6 @@ export const AddArea = ({onEnter}:Props) => {
             }
     }
     
-    function done() {
-        
-    }
 
     return(
         <C.Container>
@@ -32,8 +29,9 @@ export const AddArea = ({onEnter}:Props) => {
             value={inputText}
             onChange={(e)=>{
                 setInputText(e.target.value)
-                setDone(e.target.checked)
+                
             }}
+            
             onKeyUp={handleKeyUp}
             >
 
